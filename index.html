@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="hero is-fullheight is-warning is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
-                    <span class="digit four">4</span>
-                    <span class="digit zero">0</span>
-                    <span class="digit four">4</span>
-                </h1>
-                <h2 class="subtitle">Oops! The page you are looking for does not exist.</h2>
-                <a href="/" class="button is-primary">Go back to Home Page</a>
+    <section class="hero is-fullheight">
+        <div class="hero-body container-404">
+            <div class="content has-text-centered">
+                <p class="subtitle">Oops! Page not found.</p>
+                <div class="field">
+                    <label class="label">Change color</label>
+                    <input class="slider is-fullwidth" id="color-slider" type="range" min="0" max="360" value="0">
+                </div>
+                <a href="https://github.com/DLQuake/404-Page" class="button is-primary">Go back to Home</a>
             </div>
+            <h1 class="error-code" id="error-404">404</h1>
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 

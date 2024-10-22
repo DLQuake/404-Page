@@ -1,75 +1,71 @@
-.hero {
-    background: linear-gradient(141deg,#ffb657 0,#ffe08a 71%,#fff6a3 100%);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    animation: heroAnimation 10s infinite alternate;
-}
-
-@keyframes heroAnimation {
-    from {
-        filter: hue-rotate(0deg);
-    }
-
-    to {
-        filter: hue-rotate(360deg);
-    }
-}
-
-.title {
-    font-size: 6em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+.container-404 {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.digit {
-    display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
-    background-color: white;
+.error-code {
+    font-weight: 700;
+    color: hsl(0, 100%, 50%);
+    transition: color 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 5rem;
+    }
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right,
+            hsl(0, 100%, 50%),
+            hsl(60, 100%, 50%),
+            hsl(120, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(240, 100%, 50%),
+            hsl(300, 100%, 50%),
+            hsl(360, 100%, 50%));
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.15s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
     border-radius: 50%;
-    margin: 0.1em;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
 }
 
-.four {
-    animation-name: fourAnimation;
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.zero {
-    animation-name: zeroAnimation;
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right,
+            hsl(0, 100%, 50%),
+            hsl(60, 100%, 50%),
+            hsl(120, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(240, 100%, 50%),
+            hsl(300, 100%, 50%),
+            hsl(360, 100%, 50%));
 }
 
-@keyframes fourAnimation {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes zeroAnimation {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+input[type="range"]:hover {
+    opacity: 1;
 }
