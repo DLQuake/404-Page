@@ -1,31 +1,71 @@
 # Custom 404 Page
 
-This project is a custom 404 error page designed with **Bulma** CSS framework. The page features a dynamic "404" error message that adapts to different screen sizes and allows users to change its color using a range slider. The slider dynamically updates both the color of the "404" message and the gradient on the slider itself.
+A modern, interactive **404 error page** built with HTML, CSS, and JavaScript. The project features a futuristic dark design, glowing neon effects, animated background particles, and interactive controls to create a more engaging experience when a page cannot be found.
 
 ## Features
 
-- **Responsive Design**: The size of the "404" message adjusts dynamically based on the screen size, providing an optimal user experience on desktops, tablets, and mobile devices.
-- **Interactive Color Change**: Users can change the color of the "404" message by using a range slider that cycles through the HSL color spectrum.
-- **Real-time Updates**: The page responds in real-time to window resizing and color changes, ensuring that the content always looks great.
-- **Bulma Framework**: The page is styled with the Bulma CSS framework, which offers a modern, responsive design with minimal effort.
+- **Modern Design** – A sleek, futuristic interface with neon accents, glowing effects, and a clean layout.
+- **Responsive Layout** – Adapts to different screen sizes, including desktops, tablets, and mobile devices.
+- **Interactive Color Customization** – Change the color of the 404 heading using a color slider or predefined color presets.
+- **Random Color Generator** – Generate a new color scheme with a single click.
+- **Animated Background** – Subtle floating effects and animated particles add depth to the page.
+- **Dark and Light Themes** – Switch between dark and light appearance modes.
+- **Navigation Buttons** – Use the **Go Back** button to return to the previous page or **Back to Home** to open the project's GitHub repository.
+- **Smooth Animations** – Transitions and visual effects make interactions feel more natural.
+- **Accessibility Considerations** – Includes support for reduced-motion preferences and responsive controls.
+
+## Preview
+
+The page displays a large, glowing **404** heading surrounded by animated visual elements. Users can customize the accent color, switch themes, and navigate away using the available buttons.
 
 ## Project Structure
 
 The project consists of three main files:
 
-1. **index.html** – The main HTML structure of the 404 page.
-2. **style.css** – Custom styles, including the responsive behavior of the "404" message and the custom slider styling.
-3. **script.js** – JavaScript functionality to handle dynamic color changes and responsive font sizing.
-
-## How to Use
-
-1. Clone the repository or download the files.
-2. Open `index.html` in your browser.
-3. Use the slider to change the color of the "404" message.
-4. Resize the browser window to see how the size of the "404" message dynamically adjusts based on screen size.
+1. `index.html` – Defines the page structure, content, interactive controls, and external resources.
+2. `style.css` – Contains the visual styling, responsive layout, neon effects, animations, themes, and background design.
+3. `script.js` – Handles color customization, color presets, theme switching, navigation, and background particle animation.
 
 ## Technologies Used
 
-- **HTML**: Structure of the page.
-- **CSS (Bulma)**: For styling and responsive layout.
-- **JavaScript**: For dynamic color changing and responsive font size.
+- **HTML5** – Provides the structure and content of the page.
+- **CSS3** – Handles layout, responsive styling, animations, themes, and neon effects.
+- **JavaScript** – Powers the interactive features and dynamic visual effects.
+- **HTML Canvas** – Renders the animated background particles.
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/DLQuake/404-Page.git
+```
+
+### 2. Open the Project
+
+Navigate to the project directory:
+
+```bash
+cd 404-Page
+```
+
+### 3. Run the Page
+
+Open `index.html` in your web browser. No build tools or package installation are required.
+
+## How to Use
+
+1. Open the page in your browser.
+2. Use the color slider to customize the neon 404 heading.
+3. Select a color preset or generate a random color.
+4. Toggle between dark and light themes.
+5. Click **Go Back** to return to the previous page, or **Back to Home** to visit the GitHub repository.
+
+## Customization
+
+You can easily customize the page to match your own project:
+
+- Change the branding or logo in `index.html`.
+- Adjust colors, gradients, and visual effects in `style.css`.
+- Modify animations and interactive behavior in `script.js`.
+- Update the navigation links to point to your preferred destination.

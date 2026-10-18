@@ -4,27 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <meta name="theme-color" content="#080b14">
+    <meta name="description" content="Oops! This page seems to have drifted into space. Find your way back.">
+
+    <title>404 — Page Not Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <section class="hero is-fullheight">
-        <div class="hero-body container-404">
-            <div class="content has-text-centered">
-                <p class="title">Oops! Page not found.</p>
-                <div class="field">
-                    <label class="subtitle">Change color</label>
-                    <input class="slider is-fullwidth" id="color-slider" type="range" min="0" max="360" value="0">
-                </div>
-                <a href="https://github.com/DLQuake/404-Page" class="button mt-4 is-primary">Go back to Home</a>
-            </div>
-            <h1 class="error-code" id="error-404">404</h1>
-        </div>
-    </section>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
 
-    <script src="script.js"></script>
+    <header class="topbar">
+        <a href="https://github.com/DLQuake/404-Page" class="brand" aria-label="Visit the GitHub repository">
+            <span>404<span class="brand-accent">Page</span></span>
+        </a>
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+            <span id="theme-icon" aria-hidden="true">☼</span>
+            <span id="theme-label">Light mode</span>
+        </button>
+    </header>
+
+    <main class="error-page">
+        <section class="error-content">
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                ERROR 404 · SIGNAL LOST
+            </div>
+
+            <div class="error-visual" id="error-visual">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="error-code" id="error-404" aria-label="Error 404">404</div>
+
+                <div class="floating-star star-one">✦</div>
+                <div class="floating-star star-two">✧</div>
+                <div class="floating-star star-three">✦</div>
+            </div>
+
+            <h1>Oops! We lost this page.</h1>
+
+            <p class="description">
+                Looks like the page you're searching for
+                has drifted into digital space.
+                Don't worry — we'll help you find your way back.
+            </p>
+
+            <div class="color-panel">
+                <div class="color-heading">
+                    <label for="color-slider">Your color, your vibe</label>
+                    <span class="color-value" id="color-value">267°</span>
+                </div>
+
+                <input id="color-slider" type="range" min="0" max="360" value="267" aria-label="Change neon color">
+
+                <div class="color-presets" aria-label="Color presets">
+                    <button class="preset active" data-hue="267" style="--preset-color: #9b6dff" aria-label="Purple"
+                        title="Purple"></button>
+
+                    <button class="preset" data-hue="190" style="--preset-color: #22d3ee" aria-label="Cyan"
+                        title="Cyan"></button>
+
+                    <button class="preset" data-hue="330" style="--preset-color: #f472b6" aria-label="Pink"
+                        title="Pink"></button>
+
+                    <button class="preset" data-hue="145" style="--preset-color: #34d399" aria-label="Green"
+                        title="Green"></button>
+
+                    <button class="preset" data-hue="42" style="--preset-color: #fbbf24" aria-label="Gold"
+                        title="Gold"></button>
+
+                    <button class="preset random-preset" id="random-color" aria-label="Random color"
+                        title="Random color">✦</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a class="button button-primary" href="https://github.com/DLQuake/404-Page">
+                    <span aria-hidden="true">⌂</span>
+                    Back to Home
+                    <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <button class="button button-secondary" id="back-button" type="button">
+                    <span aria-hidden="true">←</span>
+                    Go Back
+                </button>
+            </div>
+
+            <p class="helper-text" id="helper-text" aria-live="polite">
+                Don't give up. The internet is bigger than you think.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© <span id="year"></span> YOURSPACE</span>
+        <span class="footer-divider">·</span>
+        <span>MADE FOR THE CURIOUS <span class="footer-star">✳</span></span>
+    </footer>
 </body>
 
 </html>
